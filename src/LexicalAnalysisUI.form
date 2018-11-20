@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="LexicalAnalysisUI">
+  <grid id="27dc6" binding="LexicalAnalysis" layout-manager="GridLayoutManager" row-count="7" column-count="12" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="30" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="700" height="500"/>
+    </constraints>
+    <properties>
+      <alignmentX value="1.0"/>
+      <alignmentY value="1.0"/>
+      <background color="-3881788"/>
+      <minimumSize width="300" height="200"/>
+      <opaque value="true"/>
+      <preferredSize width="750" height="650"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="57b03" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14539481"/>
+          <font name="思源黑体" size="16"/>
+          <foreground color="-14539481"/>
+          <text value="请输入要分析的程序："/>
+        </properties>
+      </component>
+      <component id="a92da" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="思源黑体" size="16"/>
+          <foreground color="-14539481"/>
+          <text value="词法分析的结果为："/>
+        </properties>
+      </component>
+      <component id="386ea" class="javax.swing.JButton" binding="保存Button" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <iconTextGap value="10"/>
+          <text value="保存"/>
+        </properties>
+      </component>
+      <component id="6b1fb" class="javax.swing.JButton" binding="开始分析Button" default-binding="true">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font swing-font="Button.font"/>
+          <text value="开始分析"/>
+        </properties>
+      </component>
+      <scrollpane id="acc74">
+        <constraints>
+          <grid row="1" column="0" row-span="2" col-span="11" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="b5f07" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+            <constraints/>
+            <properties>
+              <background color="-394759"/>
+              <disabledTextColor color="-14539481"/>
+              <font name="Fira Code" size="22" style="0"/>
+              <foreground color="-14539481"/>
+              <minimumSize width="0" height="0"/>
+              <preferredSize width="20" height="504"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="1da32">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="11" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="9d5cf" class="javax.swing.JTextArea" binding="textArea2" default-binding="true">
+            <constraints/>
+            <properties>
+              <background color="-394759"/>
+              <disabledTextColor color="-14539481"/>
+              <font name="Fira Code" size="22" style="0"/>
+              <foreground color="-14539481"/>
+              <minimumSize width="0" height="50"/>
+              <preferredSize width="0" height="504"/>
+              <wrapStyleWord value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="debda">
+        <constraints>
+          <grid row="1" column="11" row-span="5" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="ed1e1" class="javax.swing.JLabel" binding="label">
+            <constraints/>
+            <properties>
+              <icon value="zhuan.png"/>
+              <text value="转换图"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="d6009" class="javax.swing.JButton" binding="查看转换图Button" default-binding="true">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="查看转换图"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
