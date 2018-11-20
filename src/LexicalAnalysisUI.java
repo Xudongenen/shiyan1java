@@ -24,6 +24,7 @@ public class LexicalAnalysisUI {
                 textArea2.setText("");
                 LexicalAnalysis lexicalAnalysis=new LexicalAnalysis();
                 lexicalAnalysis.main(null);
+                //lexicalAnalysis.report_error();
                 try {
                     File infile = new File("D:\\作业\\编译原理\\shiyan1java\\out.txt");//建立文件对象
                     BufferedReader Breader = null;

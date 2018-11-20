@@ -44,7 +44,7 @@ public class LexicalAnalysis {
 
 
     //格式化输出
-    private static String out(int a, List<String> p) {
+    private static void out(int a, List<String> p) {
         String sp = String.join("", p);
         String x = null;
         String outtext;
@@ -121,26 +121,31 @@ public class LexicalAnalysis {
         }
         outtext="("+x+","+sp+")"+"\r\n";
         File file=new File("D:\\作业\\编译原理\\shiyan1java\\src\\out.txt");
+        savef(outtext, file);
+        System.out.printf("(%s,%s)\n", x, sp);
+    }
+
+     //对于不能识别字符报错处理函数
+     private static void report_error(char a)
+     {
+         String errorouttext="ERROR:"+a+'\n';
+         File file=new File("D:\\作业\\编译原理\\shiyan1java\\src\\out.txt");
+         savef(errorouttext, file);
+         System.out.printf("%c is error\n",a);
+     }
+
+    private static void savef(String outtext, File file) {
         try {
-            if (!file.exists())
-                file.createNewFile();
+            if (!file.exists()) file.createNewFile();
             FileWriter fileWriter=new FileWriter(file.getName(),true);
             fileWriter.write(outtext);
             fileWriter.close();
         }catch (IOException e){
             System.err.println(e);
         }
-        System.out.printf("(%s,%s)\n", x, sp);
-        return outtext;
     }
 
-     //对于不能识别字符报错处理函数
-     private static void report_error(char a)
-     {
-         System.out.printf("%c is error\n",a);
-     }
-
-     //扫描单词函数
+    //扫描单词函数
     private static void scanner_example(String fp)
     {
         ArrayList<String> t = new ArrayList<>();//定义空List
@@ -198,6 +203,7 @@ public class LexicalAnalysis {
                         if (ch == '/') {
                             break;
                         }
+                        ch = fp.charAt(--i);
                     }
                     switch (ch) {
                         case '<':

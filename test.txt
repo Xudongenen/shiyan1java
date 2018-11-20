@@ -1,7 +1,1 @@
-if(x >= 2)
-y:=0
-else
-y:=1.5
-if (y>0)
-else
-x:=6
+if "
